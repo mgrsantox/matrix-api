@@ -1,0 +1,6 @@
+*.pbf
+ors-docker/config/*
+ors-docker/elevation_cache/*
+ors-docker/files/*
+ors-docker/graph/*
+ors-docker/logs/*
