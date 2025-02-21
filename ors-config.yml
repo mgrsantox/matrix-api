@@ -100,6 +100,8 @@ ors:
   #  ##### ORS engine settings #####
   engine:
     source_file: /home/ors/files/data.osm.pbf
+    elevation:
+      provider: strm
     #    init_threads: 1
     #    preparation_mode: false
     #    graphs_root_path: ./graphs
