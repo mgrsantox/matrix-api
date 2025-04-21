@@ -4,7 +4,7 @@
 
 #### Run the server
 
-`docker compose up`
+`docker compose up --build`
 
 #### Check the status
 

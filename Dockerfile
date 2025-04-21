@@ -11,6 +11,7 @@ RUN apt-get update -qq && apt-get install -y git
 RUN git clone https://github.com/GIScience/openrouteservice.git . && \
     git switch -c v${ORS_VERSION}
 
+COPY speed_limits /app/ors-engine/src/main/resources/resources/services/routing/speed_limits
 
 ##########
 # BUILDER #
