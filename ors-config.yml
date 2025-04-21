@@ -6,3 +6,13 @@ ors:
     profiles:
       driving-car:
         enabled: true
+    elevation:
+      preprocessed: true
+  endpoints:
+    matrix:
+      enabled: true
+      maximum_routes: 90000000
+      maximum_routes_flexible: 1000
+      maximum_search_radius: 5000
+      maximum_visited_nodes: 90000000
+      allow_resolve_locations: true
