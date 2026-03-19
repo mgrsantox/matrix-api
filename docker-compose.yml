@@ -1,8 +1,17 @@
 services:
-  ors-app:
+  ors-app-nepal:
+    stop_grace_period: 10m
     build:
       context: ./
-    container_name: matrix-app
+    environment:
+      - REBUILD_GRAPHS=True
+      - "JAVA_OPTS=-Xms3g -Xmx3g -XX:+UseG1GC -Djava.awt.headless=true"
+    container_name: matrix-app-nepal
     ports:
-      - "8180:8082" # Expose the ORS API on port 8080
-      - "9001:9001" # Expose additional port for monitoring (optional)
+      - "127.0.0.1:8180:8082" # Expose the ORS API on port 8080
+      - "127.0.0.1:9001:9001" # Expose additional port for monitoring (optional)
+    volumes:
+      - graph-nepal-volume:/app/graphs
+
+volumes:
+  graph-nepal-volume:
