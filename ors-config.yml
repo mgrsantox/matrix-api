@@ -18,7 +18,7 @@ ors:
               enabled: true # MUST for matrix performance
 
       foot-walking:
-        enabled: true
+        enabled: false
         preparation:
           methods:
             ch:

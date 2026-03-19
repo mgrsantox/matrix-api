@@ -1,4 +1,3 @@
-
 FROM maven:3.8.5-openjdk-17-slim AS matrixapi
 
 ARG ORS_VERSION=9.1.1
@@ -11,7 +10,7 @@ RUN apt-get update -qq && apt-get install -y git
 RUN git clone https://github.com/GIScience/openrouteservice.git . && \
     git switch -c v${ORS_VERSION}
 
-COPY speed_limits /app/ors-engine/src/main/resources/resources/services/routing/speed_limits
+#COPY speed_limits /app/ors-engine/src/main/resources/resources/services/routing/speed_limits
 
 ##########
 # BUILDER #
